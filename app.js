@@ -6,13 +6,16 @@ const $text = document.querySelector('.text');
 const $textList = document.querySelector('.textList');
 
 const getMediumData = async () => {
+    
+    try {
     const response = await fetch(RSSConverter);
     const data = await response.json();
     console.log(data);
     return data
+    } catch(error){
+        console.log(error)
+    }
 };
-
-getMediumData()
 
 const getSingleText = async () => {
     const posts = await getMediumData();
@@ -32,7 +35,7 @@ const getSingleText = async () => {
     $text.appendChild(newText)
 };
 
-const getLastestTextsList = async () => {
+const getLatestTextsList = async () => {
     const posts = await getMediumData();
     for (let post of posts.items){
         const newItem = document.createElement('li');
