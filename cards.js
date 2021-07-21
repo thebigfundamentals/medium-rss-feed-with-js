@@ -10,6 +10,7 @@ const getTextToCard = async () => {
     for (let post of posts.items){
         const newItem = document.createElement('col');
         newItem.className = 'col';
+        
         const title = post.title;
         const link = post.link;
         const thumbnail = post.thumbnail;
