@@ -5,7 +5,7 @@ const RSSConverter = `https://api.rss2json.com/v1/api.json?rss_url=${RSSUrl}`;
 const $text = document.querySelector('.text');
 const $textList = document.querySelector('.textList');
 
-const getMediumData = async () => {
+export const getMediumData = async () => {
     
     try {
     const response = await fetch(RSSConverter);

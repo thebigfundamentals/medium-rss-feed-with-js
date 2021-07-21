@@ -1,0 +1,42 @@
+.cards {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-content: center;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.header {
+    text-decoration: underline 1px black;
+}
+
+img {
+    object-fit: cover;
+    width: 300px;
+    height: 300px;
+}
+
+@media (max-width: 600px) {
+
+    .cards {
+        width: 60%;
+        margin-left: 20%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h5 {
+        font-size: 1em;
+    }
+
+    p {
+        font-size: 0.8em;
+    }
+
+    img {
+        object-fit: cover;
+        width: 100px;
+        height: 100px;
+    }
+}
