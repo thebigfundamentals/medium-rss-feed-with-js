@@ -40,9 +40,9 @@ const makeCarousel = async () => {
         carouselItem.className = `carousel-item ${isActive()}`;
         carouselItem.innerHTML = `
         <img src="${image}" class="d-block mediumImg img-fluid" alt="">
-        <div class="carousel-caption d-none d-md-block">
-          <h5 class="bg-dark bg-opacity-50 w-auto"><a class="text-warning" href="${link}">${title}</a></h5>
-          <p class="text-muted">Published: ${pubDate}</p>
+        <div class="carousel-caption d-none d-md-block bg-secondary bg-opacity-75 p-2 w-auto">
+          <h5><a class="text-warning" href="${link}">${title}</a></h5>
+          <p class="text-white">Published: ${pubDate}</p>
         </div>`;
 
         $carousel.appendChild(carouselItem);
